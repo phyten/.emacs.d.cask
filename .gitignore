@@ -1,0 +1,13 @@
+/backup
+/auto-save-list
+/history
+/eshell/history
+*.elc
+*~
+.#*
+/anything-c-adaptive-history
+/ac-comphist.dat
+/undohist
+/url/cookies
+/tramp
+/.cask
