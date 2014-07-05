@@ -56,6 +56,7 @@
 (depends-on "flymake-ruby")
 (depends-on "rbenv")
 (depends-on "elscreen-dired")
+(depends-on "smart-newline-mode")
 
 ;; prog modes
 (depends-on "coffee-mode")
