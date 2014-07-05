@@ -55,6 +55,7 @@
 (depends-on "windata")
 (depends-on "flymake-ruby")
 (depends-on "rbenv")
+(depends-on "elscreen-dired")
 
 ;; prog modes
 (depends-on "coffee-mode")
