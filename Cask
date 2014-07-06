@@ -55,8 +55,9 @@
 (depends-on "windata")
 (depends-on "flymake-ruby")
 (depends-on "rbenv")
-(depends-on "elscreen-dired")
-(depends-on "smart-newline-mode")
+(depends-on "smart-newline" :git "git@github.com:ainame/smart-newline.el.git")
+(depends-on "robe" :git "git@github.com:dgutov/robe.git")
+(depends-on "key-combo")
 
 ;; prog modes
 (depends-on "coffee-mode")
