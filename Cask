@@ -82,3 +82,6 @@
 
 ;; theme
 (depends-on "ample-zen-theme")
+
+(depends-on "helm-git-files")
+(depends-on "helm-ls-git")
