@@ -71,7 +71,34 @@
 
 (require 'ac-helm)  ;; Not necessary if using ELPA package
 
-(global-set-key (kbd "s-I") 'helm-ls-git-ls)
-
 (require 'helm-descbinds)
 (helm-descbinds-mode)
+
+(require 'helm-ls-git)
+(setq helm-ff-transformer-show-only-basename nil
+      helm-idle-delay 0.1
+      helm-input-idle-delay 0.1
+      helm-truncate-lines t
+      helm-buffer-max-length 35
+      helm-ls-git-show-abs-or-relative 'relative
+      helm-mini-default-sources '(helm-source-buffers-list
+                                  helm-source-ls-git
+                                  helm-source-recentf
+                                  helm-source-buffer-not-found)
+
+      )
+;; (custom-set-variables
+;;  '(helm-truncate-lines t)
+;;  '(helm-buffer-max-length 35)
+;;  '(helm-delete-minibuffer-contents-from-point t)
+;;  '(helm-ff-skip-boring-files t)
+;;  '(helm-boring-file-regexp-list '("~$" "\\.elc$"))
+;;  '(helm-ls-git-show-abs-or-relative 'abs)
+;;  '(helm-mini-default-sources '(helm-source-buffers-list
+;;                                helm-source-ls-git
+;;                                helm-source-recentf
+;;                                helm-source-buffer-not-found)))
+
+(global-set-key (kbd "C-M-i") 'helm-mini)
+(key-chord-define-global "fd" 'helm-ls-git-ls)
+
