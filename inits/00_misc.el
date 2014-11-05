@@ -83,3 +83,9 @@
   (setq exec-path (append (list dir) exec-path)))
 
 (setq echo-keystrokes 0)
+
+;; hackers edition用
+(setq mac-command-modifier 'super)
+(setq mac-option-modifier 'meta)
+(set-cursor-color "#fff111")
+(setq cursor-type 'box)       ;形を選ぶ
