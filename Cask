@@ -85,3 +85,4 @@
 
 (depends-on "helm-git-files")
 (depends-on "helm-ls-git")
+(depends-on "scss-mode")
