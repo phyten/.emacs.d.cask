@@ -109,15 +109,15 @@
 					;cperl-modeデフォルトで使う
 
 ;; pod-mode
-(require 'pod-mode)
-(add-to-list 'auto-mode-alist
-	     '("\\.pod$" . pod-mode))
-(add-hook 'pod-mode-hook
-	  '(lambda () (progn
-			(font-lock-mode)
-			(auto-fill-mode 1)
-			(flyspell-mode 1)
-			)))
+;; (require 'pod-mode)
+;; (add-to-list 'auto-mode-alist
+;; 	     '("\\.pod$" . pod-mode))
+;; (add-hook 'pod-mode-hook
+;; 	  '(lambda () (progn
+;; 			(font-lock-mode)
+;; 			(auto-fill-mode 1)
+;; 			(flyspell-mode 1)
+;; 			)))
 
 ;;; perlplus
 ;;; http://www.gentei.org/~yuuji/software/perlplus.el

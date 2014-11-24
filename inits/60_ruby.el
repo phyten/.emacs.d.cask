@@ -6,6 +6,8 @@
 (add-to-list 'auto-mode-alist
              '("\\.rb$" . ruby-mode))
 (add-to-list 'auto-mode-alist
+             '("Berksfile$" . ruby-mode))
+(add-to-list 'auto-mode-alist
              '("\\.rake$" . ruby-mode))
 (add-to-list 'auto-mode-alist
              '("\\.ru$" . ruby-mode))
@@ -27,6 +29,7 @@
       (cons 'yas/hippie-try-expand  hippie-expand-try-functions-list))
 
 (setq ruby-deep-indent-paren-style nil)
+
 (defadvice ruby-indent-line (after unindent-closing-paren activate)
   (let ((column (current-column))
         indent offset)
@@ -245,13 +248,8 @@
 
   (setq ac-auto-show-menu 0.5)
   (setq ac-menu-height 20)
+  )
 
-  (robe-mode))
-
-                                        ; robe
-(autoload 'robe-mode "robe" "Code navigation, documentation lookup and completion for Ruby" t nil)
-(autoload 'robe-ac-setup "robe-ac" "robe auto-complete" nil nil)
-(add-hook 'robe-mode-hook 'robe-ac-setup)
 
 (add-hook 'ruby-mode-hook '(lambda ()
                              (load-auto-complete)

@@ -1,5 +1,9 @@
 (setq recentf-max-saved-items 5000)
 
+(require 'helm-git-files)
+(key-chord-define-global "fd" 'helm-git-files)
+(global-set-key (kbd "C-M-i") 'helm-git-files)
+
 (when (require 'helm-config nil t)
   (helm-mode 1)
 
@@ -75,18 +79,17 @@
 (helm-descbinds-mode)
 
 (require 'helm-ls-git)
-(setq helm-ff-transformer-show-only-basename nil
-      helm-idle-delay 0.1
-      helm-input-idle-delay 0.1
-      helm-truncate-lines t
-      helm-buffer-max-length 35
-      helm-ls-git-show-abs-or-relative 'relative
-      helm-mini-default-sources '(helm-source-buffers-list
-                                  helm-source-ls-git
-                                  helm-source-recentf
-                                  helm-source-buffer-not-found)
+;; (setq helm-ff-transformer-show-only-basename nil
+;;       helm-idle-delay 0.1
+;;       helm-input-idle-delay 0.1
+;;       helm-truncate-lines t
+;;       helm-buffer-max-length 35
+;;       helm-ls-git-show-abs-or-relative 'relative
+;;       helm-mini-default-sources '(helm-source-buffers-list
+;;                                   helm-source-ls-git
+;;                                   helm-source-recentf)
 
-      )
+;;       )
 ;; (custom-set-variables
 ;;  '(helm-truncate-lines t)
 ;;  '(helm-buffer-max-length 35)
@@ -98,7 +101,3 @@
 ;;                                helm-source-ls-git
 ;;                                helm-source-recentf
 ;;                                helm-source-buffer-not-found)))
-
-(global-set-key (kbd "C-M-i") 'helm-mini)
-(key-chord-define-global "fd" 'helm-ls-git-ls)
-

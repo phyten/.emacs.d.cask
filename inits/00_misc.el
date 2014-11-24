@@ -74,8 +74,8 @@
 
 (add-hook 'emacs-lisp-mode-hook 'rainbow-delimiters-mode)
 
-(require 'smooth-scroll)
-(smooth-scroll-mode -1)
+;; (require 'smooth-scroll)
+;; (smooth-scroll-mode -1)
 
 ;; PATHの追加
 (dolist (dir (mapcar 'expand-file-name '("/usr/local/bin")))
@@ -87,5 +87,7 @@
 ;; hackers edition用
 (setq mac-command-modifier 'super)
 (setq mac-option-modifier 'meta)
-(set-cursor-color "#fff111")
-(setq cursor-type 'box)       ;形を選ぶ
+;; (set-cursor-color "#fff111")
+;; (setq cursor-type 'box)       ;形を選ぶ
+
+(require 'savekill)
